@@ -1,0 +1,24 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.user-table {
+	border:1px solid #b3adad;
+	border-collapse:collapse;
+	padding:10px;
+}
+.user-table th {
+	border:1px solid #b3adad;
+	padding:10px;
+	background: #f0f0f0;
+	color: #313030;
+}
+.user-table td {
+	border:1px solid #b3adad;
+	text-align:center;
+	padding:10px;
+	background: #ffffff;
+	color: #313030;
+}

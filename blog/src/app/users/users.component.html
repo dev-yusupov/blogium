@@ -1,1 +1,24 @@
-<p>users works!</p>
+<table class="user-table">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Address1</th>
+			<th>Delete User</th>
+			<th>Edit User</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users">
+			<td>{{ user.id }}</td>
+			<td>{{ user.name }}</td>
+			<td>{{ user.username }}</td>
+			<td>{{ user.email }}</td>
+			<td></td>
+			<td><app-delete-button></app-delete-button></td>
+			<td><app-edit-button></app-edit-button></td>
+		</tr>
+	</tbody>
+</table>
