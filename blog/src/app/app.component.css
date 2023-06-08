@@ -1,0 +1,29 @@
+:root {
+	--blue: rgb(69, 192, 209);
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.navbar .navbar-logo img {
+	width: 200px;
+}
+
+.navbar .navbar-items {
+	display: flex;
+	flex-direction: row;
+}
+.navbar .navbar-items li {
+	list-style: none;
+	padding: 30px 20px;
+}
+.navbar .navbar-items li a {
+	font-family: sans-serif;
+	font-size: 19px;
+	text-decoration: none;
+	color: rgb(69, 91, 209);
+}
