@@ -10,14 +10,30 @@ import { HttpClient } from "@angular/common/http";
 export class UsersComponent implements OnInit {
   
   users: any;
+  
+  url = 'https://jsonplaceholder.typicode.com/users'
+  
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('https://jsonplaceholder.typicode.com/users')
+    this.http.get(this.url)
         .subscribe((response) => {
             this.users = response
+            console.log(typeof this.users)
       });
   }
 
+  deleteUser(id: number) {
+  //   this.http.delete('https://jsonplaceholder.typicode.com/users/${id}')
+  //     .subscribe(
+  //       (response) => {
+  //         var idx = this.users.indexOf(id)
+  //         console.log(idx)
+  //       }
+  //     );
+  // }
+    console.log(id)
+    
+  }
 }
