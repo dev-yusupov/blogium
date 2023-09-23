@@ -4,6 +4,7 @@ const routers = [
     {
         path: "/posts",
         component: Posts,
+        layout: "/",
         name: "Posts"
     }
 ]
