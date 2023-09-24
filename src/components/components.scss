@@ -29,6 +29,9 @@
     align-items: center;
     column-gap: 30px;
 }
+.Navbar .Navbar-Hamburger {
+    display: none;
+}
 
 // Github Component
 .GitHub {
@@ -60,5 +63,30 @@
     }
     .Navbar .Navbar-Items {
         display: none;
+    }
+    .Navbar .Navbar-Hamburger {
+        display: initial;
+    }
+    .Navbar-Items-Active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #868686d8;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .Navbar-Items-Active ul li {
+        list-style: none;
+        padding: 30px;
+    }
+    .Navbar-Items-Active ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 29px;
     }
 }
