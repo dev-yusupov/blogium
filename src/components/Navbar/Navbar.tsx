@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import GitHub from "./GitHub";
-import { GiHamburgerMenu } from "react-icons/gi"
+import { GiHamburgerMenu } from "react-icons/gi";
+import { HiMiniXMark } from "react-icons/hi2"
 
 const Navbar: React.FC = () => {
 
@@ -12,6 +13,7 @@ const Navbar: React.FC = () => {
     }
     const hideNavbar = () => {
         NavbarRef.current.classList.remove("Navbar-Items-Active");
+        NavbarRef.current.classList.add("Navbar-Items");
     }
 
     return (
@@ -20,6 +22,7 @@ const Navbar: React.FC = () => {
                 <h1>Blogium</h1>
             </div>
             <div className="Navbar-Items" ref={NavbarRef}>
+                <HiMiniXMark className="Navbar-XMark" size={"27px"} onClick={hideNavbar} />
                 <ul>
                     <li className="Navbar-Item">
                         <a href="/">Home</a>

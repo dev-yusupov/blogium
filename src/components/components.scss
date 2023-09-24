@@ -32,6 +32,9 @@
 .Navbar .Navbar-Hamburger {
     display: none;
 }
+.Navbar .Navbar-XMark {
+    display: none;
+}
 
 // Github Component
 .GitHub {
@@ -88,5 +91,11 @@
         color: white;
         text-decoration: none;
         font-size: 29px;
+    }
+    .Navbar-XMark {
+        display: initial!important;
+        position: absolute;
+        top: 30px;
+        right: 30px;
     }
 }
