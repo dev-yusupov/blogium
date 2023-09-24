@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/blogium/static/css/main.7ac824f5.css",
+    "main.js": "/blogium/static/js/main.cdf8b11e.js",
+    "static/js/787.c243ce00.chunk.js": "/blogium/static/js/787.c243ce00.chunk.js",
+    "index.html": "/blogium/index.html",
+    "main.7ac824f5.css.map": "/blogium/static/css/main.7ac824f5.css.map",
+    "main.cdf8b11e.js.map": "/blogium/static/js/main.cdf8b11e.js.map",
+    "787.c243ce00.chunk.js.map": "/blogium/static/js/787.c243ce00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ac824f5.css",
+    "static/js/main.cdf8b11e.js"
+  ]
+}
