@@ -1,0 +1,64 @@
+@import "../utils/design-variables.scss";
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $light-color;
+    box-shadow: 3px 5px 5px 3px rgba($color: #868686, $alpha: .2);
+    justify-content: space-around;
+}
+.Navbar .Navbar-Logo h1 {
+    color: $dark-color;
+}
+.Navbar .Navbar-Items ul {
+    display: flex;
+    flex-direction: row;
+}
+.Navbar .Navbar-Items ul .Navbar-Item {
+    list-style: none;
+    padding: 20px 40px;
+}
+.Navbar .Navbar-Items ul .Navbar-Item a {
+    text-decoration: none;
+    color: $dark-color;
+    font-size: 21px;
+}
+.Navbar .Navbar-Items-Right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 30px;
+}
+
+// Github Component
+.GitHub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+.GitHub a {
+    font-size: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.GitHub .GitHub-Stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d8d8d8;
+    padding: 2px 5px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 796px) {
+    .Navbar {
+        padding: 20px;
+    }
+    .Navbar .Navbar-Items {
+        display: none;
+    }
+}

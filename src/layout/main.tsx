@@ -1,9 +1,13 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import { Navbar } from "../components";
 
 class MainLayout extends Component {
     render(): React.ReactNode {
         return (
-            <h1>Working</h1>
+            <>
+                <Navbar />
+                <h1>Working</h1>
+            </>
         )
     }
 }
