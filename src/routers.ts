@@ -1,12 +1,20 @@
 import Posts from "./pages/posts"
+import Home from "./pages/Home"
 
 const routers = [
     {
-        path: "/posts",
-        component: Posts,
-        layout: "/",
-        name: "Posts"
-    }
-]
+      layout: "/",
+      path: "/",
+      component: Home,
+      name: "Home"
+    },
+    {
+      layout: "/",
+      path: "/posts",
+      component: Posts,
+      name: "Posts"
+    },
+    // Add more routes as needed
+  ];
 
 export default routers

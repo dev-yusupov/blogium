@@ -1,7 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import GitHub from "./GitHub";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { HiMiniXMark } from "react-icons/hi2"
+import routers from "../../routers";
+import { useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
 
@@ -16,6 +18,18 @@ const Navbar: React.FC = () => {
         NavbarRef.current.classList.add("Navbar-Items");
     }
 
+    const location = useLocation();
+
+    useEffect(() => {
+        const currentRoute = routers.find(route => route.path == location.pathname);
+
+        if (currentRoute) {
+            document.title = `${currentRoute.name} | Blogium`;
+        } else {
+            document.title = `Blogium`
+        }
+    }, [location.pathname])
+
     return (
         <div className="Navbar">
             <div className="Navbar-Logo">
@@ -24,15 +38,17 @@ const Navbar: React.FC = () => {
             <div className="Navbar-Items" ref={NavbarRef}>
                 <HiMiniXMark className="Navbar-XMark" size={"27px"} onClick={hideNavbar} />
                 <ul>
-                    <li className="Navbar-Item">
-                        <a href="/">Home</a>
-                    </li>
-                    <li className="Navbar-Item">
-                        <a href="/posts">Posts</a>
-                    </li>
-                    <li className="Navbar-Item">
-                        <a href="/users">Users</a>
-                    </li>
+                    {
+                        routers.map((router, key) => {
+                            if (router.layout === "/") {
+                                return (
+                                    <li className="Navbar-Item" key={key}>
+                                        <a href={router.path}>{router.name}</a>
+                                    </li>
+                                )
+                            }
+                        })
+                    }
                 </ul>
             </div>
             <div className="Navbar-Items-Right">
