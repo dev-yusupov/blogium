@@ -99,3 +99,33 @@
         right: 30px;
     }
 }
+
+// Buttons
+.Btn {
+    font-size: 19px;
+    font-weight: 300;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+.FilledButton {
+    background-color: $dark-color;
+    color: white;
+    border: 1px solid $darker-color;
+    cursor: pointer;
+    transition: .27s;
+}
+.FilledButton:hover {
+    background-color: white;
+    color: $darker-color;
+}
+.UnFilledButton {
+    background-color: transparent;
+    color: $darker-color;
+    border: 1px solid $darker-color;
+    cursor: pointer;
+    transition: .27s;
+}
+.UnFilledButton:hover {
+    background-color: $darker-color;
+    color: white;
+}

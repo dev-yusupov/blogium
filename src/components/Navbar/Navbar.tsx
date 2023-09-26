@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useEffect, useRef } from "react";
 import GitHub from "./GitHub";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -21,7 +22,7 @@ const Navbar: React.FC = () => {
     const location = useLocation();
 
     useEffect(() => {
-        const currentRoute = routers.find(route => route.path == location.pathname);
+        const currentRoute = routers.find(route => route.path === location.pathname);
 
         if (currentRoute) {
             document.title = `${currentRoute.name} | Blogium`;

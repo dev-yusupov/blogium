@@ -1,0 +1,37 @@
+@import "../../utils/design-variables.scss";
+
+.MainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $medium-color;
+    padding: 100px 50px;
+    row-gap: 50px;
+}
+.MainSection .MainSection-Central-Text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.MainSection .MainSection-Central-Text h1 {
+    color: white;
+    font-size: 76px;
+}
+.MainSection .MainSection-Central-Text .MainSection-Central-Text-Paragraph {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.MainSection .MainSection-Central-Text .MainSection-Central-Text-Paragraph p {
+    font-size: 24px;
+    color: $darker-color;
+}
+
+// Button part of MainSection
+.MainSection .MainSection-Links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
