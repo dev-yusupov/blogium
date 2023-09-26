@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Navbar, PostContainer } from "../../components";
+import PostUsersSection from "./PostUsersSection";
 
 // Import Scss
 import "./Post.scss";
@@ -23,13 +24,18 @@ const Posts: React.FC = () => {
         <>
             <Navbar />
             <div className="Posts">
-                {
-                    posts.map((post) => {
-                        return (
-                            <PostContainer title={post.title} body={post.body} userId={post.userId} />
-                        )
-                    })
-                }
+                <div className="PostUsers">
+                    <PostUsersSection />
+                </div>
+                <div className="PostsSection">
+                    {
+                        posts.map((post) => {
+                            return (
+                                <PostContainer title={post.title} body={post.body} userId={post.userId} />
+                            )
+                        })
+                    }
+                </div>
             </div>
         </>
     )

@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import routers from './routers';
+import { UserDetails } from './pages/Users';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             )
           })
         }
+        <Route path="/users/user/:id" Component={UserDetails} />
       </Routes>
     </Router>
   );
