@@ -1,5 +1,5 @@
-import Posts from "./pages/posts"
 import Home from "./pages/Home/Home"
+import Posts from "./pages/Post";
 
 const routers = [
     {
