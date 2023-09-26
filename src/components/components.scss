@@ -131,3 +131,57 @@
 }
 
 // Post Container
+.PostContainer {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(206, 206, 206, 0.466);
+    max-width: 50%;
+    padding: 15px 20px;
+    column-gap: 30px;
+}
+.PostContainer .PostContainer-Left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.PostContainer .PostContainer-Left .PostContainer-Body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.PostContainer .PostContainer-Title {
+    color: $dark-color;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+}
+.PostContainer .PostContainer-Right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+@media (max-width: 796px) {
+    // Post Container
+    .PostContainer {
+        flex-direction: column;
+        max-width: 80%;
+        padding: 15px 20px;
+        column-gap: 0px;
+        row-gap: 30px;
+    }
+    .PostContainer .PostContainer-Right {
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: 30px;
+    }
+}
+
+// IconButton
+.IconButton {
+    padding: 5px;
+    border-radius: 10px;
+    border: 0.6px solid $dark-color;
+    background-color: $light-color;
+    cursor: pointer;
+}
