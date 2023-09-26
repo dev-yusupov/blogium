@@ -1,7 +1,42 @@
+@import "../../utils/design-variables.scss";
+
 .Posts {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+.PostsSection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
     row-gap: 30px;
+}
+
+.PostUsersSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 1px solid rgba(206, 206, 206, 0.466);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    position: absolute;
+}
+.PostUsersSection .PostUsersSection-Title {
+    font-size: 26px;
+    font-weight: 600;
+    color: $darker-color;
+}
+.PostUsersSection .PostUsersSection-Users {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.PostUsersSection .PostUsersSection-UserName {
+    font-size: 19px;
+    font-weight: 400;
+    color: $dark-color;
+    text-decoration: none;
 }
