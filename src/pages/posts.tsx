@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { Navbar } from "../components";
 
 const Posts: React.FC = () => {
     const [posts, setPosts] = useState<any[]>([]);
@@ -17,6 +18,7 @@ const Posts: React.FC = () => {
 
     return (
         <>
+            <Navbar />
             {
                 posts.map((post) => {
                     return (

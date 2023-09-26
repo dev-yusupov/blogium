@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainLayout from './layout';
+import routers from './routers';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' Component={MainLayout} />
+        {
+          routers.map((prop, key) => {
+            return (
+              <Route path={prop.path} Component={prop.component} key={key} />
+            )
+          })
+        }
       </Routes>
     </Router>
   );
