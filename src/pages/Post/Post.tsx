@@ -2,6 +2,9 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Navbar, PostContainer } from "../../components";
 
+// Import Scss
+import "./Post.scss";
+
 const Posts: React.FC = () => {
     const [posts, setPosts] = useState<any[]>([]);
 
@@ -19,13 +22,15 @@ const Posts: React.FC = () => {
     return (
         <>
             <Navbar />
-            {
-                posts.map((post) => {
-                    return (
-                        <PostContainer title={post.title} />
-                    )
-                })
-            }
+            <div className="Posts">
+                {
+                    posts.map((post) => {
+                        return (
+                            <PostContainer title={post.title} body={post.body} userId={post.userId} />
+                        )
+                    })
+                }
+            </div>
         </>
     )
 }  
